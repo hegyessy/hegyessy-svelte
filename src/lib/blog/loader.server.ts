@@ -10,6 +10,8 @@ import type { ArticleEntry, LinkEntry, WeblogEntry } from './types.js';
 
 declare const __CONTENT_DIR__: string;
 
+const WEBLOG_DIR = join(__CONTENT_DIR__, 'weblog');
+
 const markdownProcessor = unified()
 	.use(remarkParse)
 	.use(remarkRehype)
@@ -32,7 +34,7 @@ interface RawData {
 }
 
 async function loadEntry(folderName: string): Promise<WeblogEntry> {
-	const folderPath = join(__CONTENT_DIR__, folderName);
+	const folderPath = join(WEBLOG_DIR, folderName);
 
 	const dataRaw = await readFile(join(folderPath, 'data.yaml'), 'utf-8');
 	const data = yaml.load(dataRaw) as RawData;
@@ -67,7 +69,7 @@ async function loadEntry(folderName: string): Promise<WeblogEntry> {
 }
 
 export async function getAllEntries(): Promise<WeblogEntry[]> {
-	const items = await readdir(__CONTENT_DIR__, { withFileTypes: true });
+	const items = await readdir(WEBLOG_DIR, { withFileTypes: true });
 	const folders = items
 		.filter((d) => d.isDirectory())
 		.map((d) => d.name)
@@ -85,8 +87,8 @@ export async function getArticleBySlug(slug: string): Promise<ArticleEntry | nul
 }
 
 export function getContentFilePath(filePath: string): string | null {
-	const resolved = join(__CONTENT_DIR__, filePath);
-	if (!resolved.startsWith(__CONTENT_DIR__)) {
+	const resolved = join(WEBLOG_DIR, filePath);
+	if (!resolved.startsWith(WEBLOG_DIR)) {
 		return null;
 	}
 	return resolved;

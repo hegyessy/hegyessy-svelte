@@ -1,2 +1,7 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+
+body {
+	margin: 0;
+	background: #f8f6f3;
+}

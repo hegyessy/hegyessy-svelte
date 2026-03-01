@@ -6,6 +6,6 @@ import { defineConfig } from 'vite';
 export default defineConfig({
 	plugins: [tailwindcss(), sveltekit()],
 	define: {
-		__CONTENT_DIR__: JSON.stringify(resolve('./src/content/weblog'))
+		__CONTENT_DIR__: JSON.stringify(resolve('./src/content'))
 	}
 });
