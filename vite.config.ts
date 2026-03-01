@@ -1,6 +1,11 @@
+import { resolve } from 'node:path';
 import { sveltekit } from '@sveltejs/kit/vite';
+import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-	plugins: [sveltekit()]
+	plugins: [tailwindcss(), sveltekit()],
+	define: {
+		__CONTENT_DIR__: JSON.stringify(resolve('./src/content/weblog'))
+	}
 });

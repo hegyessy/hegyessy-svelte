@@ -1,0 +1,1 @@
+Runes replace Svelte's `let`-based reactivity with explicit `$state` and `$derived` primitives. This is a big shift, but it makes the mental model much clearer — especially for components with complex derived state.
