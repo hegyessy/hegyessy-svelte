@@ -23,14 +23,14 @@
 				class="grid grid-cols-[8.5rem_1fr] gap-2 py-3
 					max-sm:grid-cols-1 max-sm:gap-0.5"
 			>
-				<span class="pt-0.5 text-sm tabular-nums text-stone-500">
+				<span class="pt-0.5 text-sm tabular-nums dark:text-bg/80">
 					{role.start} – {role.end}
 				</span>
 				<div>
-					<strong class="block mb-1 text-base font-medium">
+					<strong class="block mb-1 text-base font-bold">
 						{role.title}, {role.company}
 					</strong>
-					<p class="m-0 text-[0.9375rem] font-light text-stone-500">
+					<p class="m-0 text-[0.9375rem] text-fg dark:text-bg/80">
 						{role.description}
 					</p>
 				</div>
