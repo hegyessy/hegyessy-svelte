@@ -18,7 +18,7 @@
 			Jason Hegyessy
 		</h1>
 		<p class="m-0 max-w-[30rem] text-xl">
-			Software designer with fifteen years of experience shaping complex,
+			Software designer with sixteen years of experience shaping complex,
 			enterprise-scale products into clear, intuitive experiences for web and mobile.
 		</p>
 	</header>
