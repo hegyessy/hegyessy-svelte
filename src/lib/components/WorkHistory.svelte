@@ -12,7 +12,7 @@
 
 <section>
 	<h2
-		class="m-0 mb-6 text-xs font-medium uppercase tracking-widest text-stone-500"
+		class="m-0 text-xs font-medium uppercase tracking-widest"
 	>
 		Work
 	</h2>
@@ -20,8 +20,8 @@
 	<ol class="m-0 list-none p-0">
 		{#each roles as role}
 			<li
-				class="grid grid-cols-[8.5rem_1fr] gap-2 border-t border-stone-300 py-5
-					last:border-b max-sm:grid-cols-1 max-sm:gap-0.5"
+				class="grid grid-cols-[8.5rem_1fr] gap-2 py-3
+					max-sm:grid-cols-1 max-sm:gap-0.5"
 			>
 				<span class="pt-0.5 text-sm tabular-nums text-stone-500">
 					{role.start} – {role.end}

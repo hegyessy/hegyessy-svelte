@@ -2,7 +2,17 @@
 @plugin '@tailwindcss/typography';
 
 @theme {
+	--font-serif: "Sentinel A", "Sentinel B", Georgia, serif;
 	--color-primary: rgb(243 64 33);
 	--color-bg: rgb(231 222 205);
 	--color-fg: rgb(46 46 58);
+}
+
+body {
+	font-family: var(--font-serif);
+	background: var(--color-bg);
+}
+
+h1, h2, h3, h4 {
+	@apply text-primary font-bold;
 }
